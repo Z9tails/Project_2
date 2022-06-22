@@ -12,15 +12,16 @@
     <title>Login</title>
 </head>
 <body>
-    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
 
     <div id="login" class="modal">
       
       <form class="modal-content animate" action="/action_page.php" method="post">
         <div class="imgcontainer">
-          <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>
           <span class="oi oi-person"></span>
+          <h2>Welcome Back!</h2>
         </div>
     
         <div class="container">
@@ -30,10 +31,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
             
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
+          <button type="submit">Log in</button>
         </div>
     
         <div class="container" style="background-color:#f1f1f1">
@@ -46,8 +44,9 @@
       
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
-            <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close">&times;</span>
             <span class="oi oi-person"></span>
+            <h2>Welcome!</h2>
           </div>
       
           <div class="container">
@@ -58,9 +57,6 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
               
             <button type="submit">Create Account</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
           </div>
       
           <div class="container" style="background-color:#f1f1f1">
