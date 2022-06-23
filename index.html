@@ -14,7 +14,11 @@
 <body>
     <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
-
+    <!-- block for the game -->
+    <div class="gameContainer">
+      <canvas></canvas>
+    </div>
+    <!-- END GAME BLOCK -->
     <div id="login" class="modal">
       
       <form class="modal-content animate" action="/action_page.php" method="post">
@@ -66,5 +70,8 @@
       </div>
     
     <script src="./assets/js/script.js"></script>
+    <!-- script js file for game -->
+    <script src="index.js"></script>
+    <!-- end game script -->
 </body>
 </html>
