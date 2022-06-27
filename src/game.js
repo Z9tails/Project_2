@@ -1,4 +1,4 @@
-import platform from './assets/img/platform.png'
+import platform from '../public/assets/img/platform.png'
 
 // setting up the canvas elements
 const canvas = document.querySelector('canvas');
