@@ -1,4 +1,9 @@
+<<<<<<< HEAD:public/assets/js/game.js
+// import platform from '../public/assets/img/platform.js'
+// console.log(platform)
+=======
 import platform from '../public/assets/img/platform.png'
+>>>>>>> 02ab0fdd24c2dc208da94418ebcb0fba05db2e8d:src/game.js
 
 // setting up the canvas elements
 const canvas = document.querySelector('canvas');
@@ -50,17 +55,49 @@ class Platform {
         } 
         this.width = 200;
         this.height = 20;
+
+        // this.image
     }
 
     draw() {
+        // c.drawImage(this.image, this.position.x, this.position.y)
         c.fillStyle = 'blue';
         c.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 }
 
-const player = new Player();
+class Npc {
+    constructor() {
+        this.position = {
+            x: 200,
+            y: 200
+        };
+        this.velocity = {
+            x: 0,
+            y: 0
+        }
+        this.width = 30;
+        this.height = 50;
+    }
 
-const platforms = [new Platform({x: 200, y: 500}), new Platform({x: 100, y: 300})]
+    draw() {
+        c.fillStyle = 'green';
+        c.fillRect(this.position.x, this.position.y, this.width, this.height);
+    }
+    
+}
+
+const image = new Image();
+// image.src = platform;
+
+const player = new Player();
+const platforms = [
+    new Platform({
+        x: 200, 
+        y: 500,
+        // image: ''
+    
+    }), new Platform({x: 100, y: 300})]
 
 const keys = {
     right: {
