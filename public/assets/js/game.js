@@ -1,9 +1,4 @@
-<<<<<<< HEAD:public/assets/js/game.js
-// import platform from '../public/assets/img/platform.js'
-// console.log(platform)
-=======
-import platform from '../public/assets/img/platform.png'
->>>>>>> 02ab0fdd24c2dc208da94418ebcb0fba05db2e8d:src/game.js
+// import platform from '../public/assets/img/platform.png'
 
 // setting up the canvas elements
 const canvas = document.querySelector('canvas');
@@ -92,12 +87,13 @@ const image = new Image();
 
 const player = new Player();
 const platforms = [
-    new Platform({
-        x: 200, 
-        y: 500,
-        // image: ''
+    // new Platform({
+    //     x: 200, 
+    //     y: 500,
+    //     // image: ''
     
-    }), new Platform({x: 100, y: 300})]
+    // }), 
+    new Platform({x: 200, y: 600}), new Platform({x: 500, y: 600}), new Platform({x: 800, y: 600})]
 
 const keys = {
     right: {
@@ -122,9 +118,9 @@ function animate() {
     
 
     // player movement
-    if (keys.right.pressed && player.position.x < 400) {
+    if (keys.right.pressed && player.position.x < 1000) {
         player.velocity.x = 3;
-    } else if (keys.left.pressed && player.position.x > 100) {
+    } else if (keys.left.pressed && player.position.x > 200) {
         player.velocity.x = -3;
     } else { 
         player.velocity.x = 0;
