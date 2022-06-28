@@ -1,5 +1,9 @@
+<<<<<<< HEAD:public/assets/js/game.js
 // import platform from '../public/assets/img/platform.js'
 // console.log(platform)
+=======
+import platform from '../public/assets/img/platform.png'
+>>>>>>> 02ab0fdd24c2dc208da94418ebcb0fba05db2e8d:src/game.js
 
 // setting up the canvas elements
 const canvas = document.querySelector('canvas');
