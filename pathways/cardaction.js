@@ -38,7 +38,7 @@ const onCardClick = async (e) => {
 
         cardClone.style.removeProperty('display');
         cardClone.style.removeProperty('padding');
-        [....cardClone.children].forEach(child => child.style.removeProperty('display'));
+        [...cardClone.children].forEach(child => child.style.removeProperty('display'));
         fadeContent(cardClone,'0');
 
         await toggleExpansion(cardClone, {top:`${top}px`,
@@ -53,8 +53,16 @@ const onCardClick = async (e) => {
         .then (()=> {
             [...cardClone.children].forEach(child => child.style.display = 'none');
         });
-        //expand the clone card
-        await toggleExpansion(cardClone, {top})
+        //expand the clone card- tie to the pixel blocks
+        await toggleExpansion(cardClone, {top: 0, left: 0, right: 0, width: 100, height: 100});
+        const content = getCardContent(card.textContent, card.dataset.type)
+       //set the display block
+        cardClone.style.display = 'block';
+        cardClone.style.padding = '0 0 0 0';
+        cardClone.appendChild(selectButton);
+        cardClone.insertAdjacentHTML('afterbegin', content);
+    };
+
 
 
 cards.forEach(card => card.addEventListener('click', onCardClick));
