@@ -30,9 +30,31 @@ const onCardClick = async (e) => {
                             border-radius: 50%; 
                             background-color: transparent;
                             `;
-                            
-};
 
+    // Click event handler for selection button
+     selectButton.addEventListener('click', async () => {
+
+        selectButton.remove();
+
+        cardClone.style.removeProperty('display');
+        cardClone.style.removeProperty('padding');
+        [....cardClone.children].forEach(child => child.style.removeProperty('display'));
+        fadeContent(cardClone,'0');
+
+        await toggleExpansion(cardClone, {top:`${top}px`,
+                                         left:`${left}px`, 
+                                         right:`${right}px`,
+                                         width:`${width}px`,
+                                         height:`${height}px`}, 100);
+                                        
+     });
+     //fade content out
+     fadeContent(cardClone, '0')
+        .then (()=> {
+            [...cardClone.children].forEach(child => child.style.display = 'none');
+        });
+        //expand the clone card
+        await toggleExpansion(cardClone, {top})
 
 
 cards.forEach(card => card.addEventListener('click', onCardClick));
