@@ -62,10 +62,10 @@ class Platform {
 }
 
 class Npc {
-    constructor() {
+    constructor( {x, y}) {
         this.position = {
-            x: 200,
-            y: 200
+            x: x,
+            y: y
         };
         this.velocity = {
             x: 0,
@@ -79,6 +79,17 @@ class Npc {
         c.fillStyle = 'green';
         c.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
+
+    update() {
+        this.draw();
+        this.position.x += this.velocity.x;
+        this.position.y += this.velocity.y;
+        // to add velocity as player falls
+        if (this.position.y + this.height + this.velocity.y 
+            <= canvas.height )
+        this.velocity.y += gravity;
+        else this.velocity.y = 0;
+    }
     
 }
 
@@ -86,6 +97,7 @@ const image = new Image();
 // image.src = platform;
 
 const player = new Player();
+const npcs =[ new Npc({x: 575, y:900})];
 const platforms = [
     // new Platform({
     //     x: 200, 
@@ -112,6 +124,9 @@ function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, canvas.width, canvas.height);
     player.update();
+    npcs.forEach(npc => {
+        npc.draw()
+    })
     platforms.forEach(platform => {
         platform.draw()
     })
@@ -124,19 +139,25 @@ function animate() {
         player.velocity.x = -3;
     } else { 
         player.velocity.x = 0;
-
+        // scroll platforms to the right or left
         if(keys.right.pressed) {
             scrollOffset += 3;
             platforms.forEach(platform => {
                 platform.position.x -= 3;
+            })
+            npcs.forEach(npc => {
+                npc.position.x -= 3;
             })
             
         } else if (keys.left.pressed) {
             scrollOffset -= 3;
             platforms.forEach(platform => {
                 platform.position.x += 3;
-            }) 
-        } 
+            })
+            npcs.forEach(npc => {
+                npc.position.x += 3;
+            })  
+        }
 
         if (scrollOffset > 2000) {
             console.log('you win')
