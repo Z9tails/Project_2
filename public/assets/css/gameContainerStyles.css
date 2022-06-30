@@ -1,3 +1,5 @@
 .gameContainer {
-    background-color: white;
+    background-image: url("../img/bedroom.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
