@@ -1,3 +1,6 @@
+////Card interaction
+
+
 const cards = document.querySelectorAll('.card');
 
 
@@ -65,4 +68,6 @@ const onCardClick = async (e) => {
 
 
 
-cards.forEach(card => card.addEventListener('click', onCardClick));
+cards.forEach(card => card.addEventListener('touch', onCardTouch));
+
+module.exports = cardAction;
