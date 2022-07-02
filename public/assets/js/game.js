@@ -174,7 +174,19 @@ function animate() {
     ) {
         player.velocity.y = 0;
     }
-    }) 
+    })
+
+    npcs.forEach(npc => {
+        if (player.position.x + player.width === npc.position.y 
+            // player.position.x + player.width + player.velocity.x >= npc.position.x && 
+            // player.position.y + player.height >= npc.position.y &&
+            // player.position.y <= npc.position.y + npc.height
+        ) {
+            console.log('Npc is now talking');
+        }
+        })  
+    
+    
 };
 
 animate();
