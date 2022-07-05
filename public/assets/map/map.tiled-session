@@ -64,34 +64,60 @@
         "map..tmj#tile_wall": {
             "scaleInDock": 1
         },
+        "map.JSON": {
+            "scale": 0.3589903846153846,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 754.8948707646981,
+                "y": 1041.8106334538636
+            }
+        },
+        "map.JSON#bed2": {
+            "scaleInDock": 1
+        },
+        "map.JSON#build_atlas": {
+            "scaleInDock": 1
+        },
+        "map.JSON#obj_misk_atlas": {
+            "scaleInDock": 1
+        },
+        "map.JSON#roguelikeIndoor_transparent": {
+            "scaleInDock": 1
+        },
+        "map.JSON#tile_room": {
+            "scaleInDock": 1
+        },
+        "map.JSON#tile_wall": {
+            "scaleInDock": 1
+        },
         "map.tmx": {
             "expandedObjectLayers": [
                 5
             ],
-            "scale": 2,
-            "selectedLayer": 2,
+            "scale": 0.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 811,
-                "y": 836
+                "x": 1066,
+                "y": 708
             }
         },
         "map.tmx#bed2": {
-            "scaleInDock": 1
-        },
-        "map.tmx#build_atlas": {
-            "scaleInDock": 1
-        },
-        "map.tmx#obj_misk_atlas": {
             "scaleInDock": 1.5
         },
+        "map.tmx#build_atlas": {
+            "scaleInDock": 0.75
+        },
+        "map.tmx#obj_misk_atlas": {
+            "scaleInDock": 0.5
+        },
         "map.tmx#roguelikeIndoor_transparent": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "map.tmx#tile_room": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "map.tmx#tile_wall": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "untitled.tmx": {
             "scale": 1,
@@ -132,6 +158,7 @@
     "project": "map.tiled-project",
     "property.type": "bool",
     "recentFiles": [
+        "map.JSON",
         "map..tmj",
         "map.tmx",
         "untitled.tmx"

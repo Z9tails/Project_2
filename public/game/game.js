@@ -4,9 +4,9 @@ var config = {
     height: 2000,
     parent: 'canvas',
     physics: {
-        default: 'arcade',
+        default: "arcade",
         arcade: {
-            gravity: {y: 750},
+            gravity: { y: 750 },
             debug: false
         }
     },
@@ -15,8 +15,9 @@ var config = {
         preload: preload,
         create: create,
         // update: update
+        // add scale manager for full scene deployment
     }
-}
+};
 
 var game = new Phaser.Game(config);
 
@@ -44,7 +45,17 @@ function create() {
     // floors layer
     const floorTileset = map.addTilesetImage('obj_misk_atlas', 'floor'); 
     const floorLayer = map.createLayer("floors", floorTileset, 0,0);
-    floorLayer.setCollisionByProperty({Collision: true})
+    floorLayer.setCollisionByProperty({Collision: true});
+
+    // grass layer
+    const grassTileset = map.addTilesetImage('tile_wall', 'wall'); 
+    const grassLayer = map.createLayer("grass", grassTileset, 0,0);
+    // grassLayer.setCollisionByProperty({Collision: true})
+
+    // woodPlatform layer
+    const woodPlatformTileset = map.addTilesetImage('tile_wall', 'wall'); 
+    const woodPlatformLayer = map.createLayer("woodPlatforms", woodPlatformTileset, 0,0);
+    // woodPlatformLayer.setCollisionByProperty({Collision: true})
 
     // walls layer
     const wallsTileset = map.addTilesetImage('tile_wall', 'wall'); 
@@ -60,6 +71,10 @@ function create() {
     // decorations layer
     const decorationsTileset = map.addTilesetImage('obj_misk_atlas', 'floor'); 
     const decorationsLayer = map.createLayer("decorations", decorationsTileset, 0,0);
+
+    // outdoorDecorations layer
+    const outdoorDecorationsTileset = map.addTilesetImage('build_atlas', 'building'); 
+    const outdoorDecorationsLayer = map.createLayer("outdoorDecorations", outdoorDecorationsTileset, 0,0);
 
     player = this.add.sprite(200, 200, 'BiggieSmalls');
 
@@ -122,27 +137,16 @@ function update() {
         player.anims.play('turn');
     }
 
-    // if(cursors.right.isDown){
-    //     console.log(player.body.velocity.y)
-    // }
-
 
 
     if (cursors.up.isDown && player.body.velocity.y > -1.388888888888889 && player.body.velocity.y < 1.388888888888889) {
-        // console.log(player.body.velocity.y)
-        // player.setVelocityY(0)
+
         player.setVelocityY(-330);
         player.anims.play('jump', true);
-        // player.flipY = true;
+
     }
 
-    // if (movingPlatform.x >= 500) {
-    //     movingPlatform.setVelocityX(-50);
-    // }
-    // else if (movingPlatform.x <= 300) {
-    //     movingPlatform.setVelocityX(50);
-    // }
 
 
-    // this.physics.add.collider(player);
+    player.physics.add.collide(player);
 }
