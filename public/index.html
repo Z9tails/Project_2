@@ -18,33 +18,38 @@
     <title>Login</title>
   </head>
   <body>
-    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
-    <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+    <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
+    <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
-    <div class="gameContainer" id="game-container">
+    <section id="games">
       <button id="start-game">Start Game</button>
-        <section id="card-game" class="hide">
-            <!-- BEGIN PROMPT -->
-            <div id="text">Text</div>
-            <!-- END PROMPT -->
-            <!-- BEGIN CARDS -->
-            <div id="option-buttons" class="btn-grid">
-                <button class="card blue">Option 1</button>
-                <button class="card green">Option 1</button>
-                <button class="card red">Option 1</button>
-            </div>
-            <!-- END CARDS -->
-        </section>
-      <input type="button" value="Swap Background background-image to bed"
-          onclick="document.getElementById('game-container').classList.toggle('bed')">
-      <input type="button" value="Swap Background background-image to tree"
-          onclick="document.getElementById('game-container').classList.toggle('tree')">
-      <input type="button" value="Swap Background background-image to fish"
-          onclick="document.getElementById('game-container').classList.toggle('fish')">
-      <input type="button" value="Swap Background background-image to blank"
-          onclick="document.getElementById('game-container').classList.toggle('blank')">
-    </div>
+      <div id="card-game" class="hide">
+        <!-- BEGIN PROMPT -->
+        <div id="text"></div>
+        <!-- END PROMPT -->
+        <!-- BEGIN CARDS -->
+        <div id="option-buttons" class="btn-grid">
+          <button class="card blue"></button>
+          <button class="card green"></button>
+          <button class="card red"></button>
+        </div>
+        <!-- END CARDS -->
+      </div>
+      <div class="gameContainer" id="game-container"></div>
+      <div id="change-background">
+        <input type="button" value="Swap Background background-image to bed"
+            onclick="document.getElementById('games').classList.toggle('bed')">
+        <input type="button" value="Swap Background background-image to tree"
+            onclick="document.getElementById('games').classList.toggle('tree')">
+        <input type="button" value="Swap Background background-image to fish"
+            onclick="document.getElementById('games').classList.toggle('fish')">
+        <input type="button" value="Swap Background background-image to blank"
+            onclick="document.getElementById('games').classList.toggle('blank')">
+      </div>
+    </section>
     <!-- END GAME BLOCK -->
+
+    <!-- LOG IN MODAL BEGIN -->
     <div id="login" class="modal">
       
       <form class="modal-content animate" action="/action_page.php" method="post">
@@ -94,7 +99,7 @@
         </div>
       </form>
     </div>
-    
+    <!-- LOG IN MODAL ENDS -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/prompt-card.js"></script>
     <!-- script js file for game -->
