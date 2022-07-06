@@ -1,0 +1,9 @@
+const { comment } = require('../models');
+
+const commentdata = [
+  
+];
+
+const seedComments = () => comment.bulkCreate(commentdata);
+
+module.exports = seedComments;
