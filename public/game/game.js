@@ -1,7 +1,10 @@
 var config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    parent: 'game-container',
+    width: 900,
+    height: 700,
+    transparent: true,
+    autoCenter: true,
     physics: {
         default: 'arcade',
         arcade: {
@@ -22,24 +25,25 @@ function preload ()
 {
     this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
-    this.load.image('star', 'assets/fish.png');
+    this.load.image('fish', 'assets/fish.png');
     this.load.image('bomb', 'assets/bomb.png');
     // this.load.spritesheet('dude', 
     //     'assets/dude.png',
     //     { frameWidth: 32, frameHeight: 48 }
     // );
     this.load.spritesheet('bear', 'assets/Bear.png',
-        {frameWidth: 32, frameHeight: 32}
+        {frameWidth: 30, frameHeight: 32}
     );
 }
 
 var platforms;
 var player;
 var cursors;
-var stars;
+var fishys;
 var score = 0;
 var scoreText;
 var bombs;
+var gameOver;
 
 function create ()
 {
@@ -84,42 +88,42 @@ function create ()
     this.physics.add.collider(player, platforms);
 
 
-    // the star objects
-    stars = this.physics.add.group({
-        key: 'star',
+    // the fish objects
+    fishys = this.physics.add.group({
+        key: 'fish',
         repeat: 11,
         setXY: { x: 12, y: 0, stepX: 70 }
     });
     
-    stars.children.iterate(function (child) {
+    fishys.children.iterate(function (child) {
     
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     
     });
 
-    this.physics.add.collider(stars, platforms);
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.collider(fishys, platforms);
+    this.physics.add.overlap(player, fishys, collectfish, null, this);
 
-    function collectStar (_player, star)
+    function collectfish (_player, fish)
 {
-    star.disableBody(true, true);
+    fish.disableBody(true, true);
 }
 
     //  the score object
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-    function collectStar (_player, star) 
+    function collectfish (_player, fish) 
 
     {{
     
-    star.disableBody(true, true);
+    fish.disableBody(true, true);
 
     score += 10;
     scoreText.setText('Score: ' + score);
 
-    if (stars.countActive(true) === 0)
+    if (fishys.countActive(true) === 0)
     {
-        stars.children.iterate(function (child) {
+        fishys.children.iterate(function (child) {
 
             child.enableBody(true, child.x, 0, true, true);
 
