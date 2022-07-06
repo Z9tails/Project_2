@@ -15,7 +15,7 @@ input[type=text], input[type=password] {
   }
   
   /* Set a style for all buttons */
-  button {
+  .nav {
     font-family: "kdam thmor pro", sans-serif;
     background-color: rgb(48, 187, 48);
     color: black;

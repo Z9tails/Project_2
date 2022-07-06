@@ -1,4 +1,4 @@
-.gameContainer {
+#games {
     background-image: url("../img/blank.png ");
     background-position: center;
     background-repeat: no-repeat;
@@ -8,16 +8,16 @@
     transition: background-image 1s;
     padding: 50px 0;
 }
-#game-container.bed {
+#games.bed {
     background-image: url("../img/bed.png");
 }
-#game-container.tree {
+#games.tree {
     background-image: url("../img/tree.png");
 }
-#game-container.fish {
+#games.fish {
     background-image: url("../img/fishy.png");
 }
-#game-container.blank {
+#games.blank {
     background-image: url("../img/blank.png");
 }
 @keyframes morph {
