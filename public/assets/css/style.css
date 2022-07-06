@@ -1,3 +1,7 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 body{
     font-family: "kdam thmor pro", sans-serif;
@@ -24,6 +28,7 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     width: 100%;
+    border-radius: 2px;
   }
   
   button:hover {
