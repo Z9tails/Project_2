@@ -12,14 +12,16 @@
     <!-- styles for gameContainer -->
     <link rel="stylesheet" href="./assets/css/gameContainerStyles.css">
     <!-- end styles for game container -->
+    <!-- phaser script -->
+    <script type="text/javascript" src="./game/phaser.min.js"></script>
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
-    <div class="gameContainer">
-      <canvas></canvas>
+    <div class="gameContainer" id="game-container">
+      <script type="module" src="./game/game.js"></script>
     </div>
     <!-- END GAME BLOCK -->
     <div id="login" class="modal">
@@ -74,7 +76,6 @@
     
     <script src="./assets/js/script.js"></script>
     <!-- script js file for game -->
-    <script src="index.js"></script>
     <!-- end game script -->
 </body>
 </html>
