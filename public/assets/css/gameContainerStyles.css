@@ -9,19 +9,19 @@
     padding: 50px 0;
 }
 
-#background.bed {
+#game-container.bed {
     background-image: url("../img/bed.png");
 }
 
-#background.tree {
+#game-container.tree {
     background-image: url("../img/tree.png");
 }
 
-#background.fish {
+#game-container.fish {
     background-image: url("../img/fish.png");
 }
 
-#background.blank {
+#game-container.blank {
     background-image: url("../img/blank.png");
 }
 

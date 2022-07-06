@@ -19,7 +19,7 @@
     <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
-    <div id="background" class="gameContainer">
+    <div id="game-container" class="gameContainer">
       <button id="start-game">Start Game</button>
         <section id="card-game" class="hide">
             <!-- BEGIN PROMPT -->
@@ -35,13 +35,13 @@
         </section>
       <canvas></canvas>
       <input type="button" value="Swap Background background-image to bed"
-          onclick="document.getElementById('background').classList.toggle('bed')">
+          onclick="document.getElementById('game-container').classList.toggle('bed')">
       <input type="button" value="Swap Background background-image to tree"
-          onclick="document.getElementById('background').classList.toggle('tree')">
+          onclick="document.getElementById('game-container').classList.toggle('tree')">
       <input type="button" value="Swap Background background-image to fish"
-          onclick="document.getElementById('background').classList.toggle('fish')">
+          onclick="document.getElementById('game-container').classList.toggle('fish')">
       <input type="button" value="Swap Background background-image to blank"
-          onclick="document.getElementById('background').classList.toggle('blank')">
+          onclick="document.getElementById('game-container').classList.toggle('blank')">
     </div>
     <!-- END GAME BLOCK -->
 
