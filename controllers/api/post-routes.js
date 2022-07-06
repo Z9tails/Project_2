@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, } = require('../../models');
+const { Post, User, comment, } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     
     include: [
       {
-        model: Comment,
+        model: comment,
         
         include: {
           model: User,
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     
     include: [
       {
-        model: Comment,
+        model: comment,
         
         include: {
           model: User,

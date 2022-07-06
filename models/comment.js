@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Comment extends Model {}
+class comment extends Model {}
 
-Comment.init(
+comment.init(
   {
     comment_text: {
       type: DataTypes.STRING,
@@ -17,4 +17,4 @@ Comment.init(
   }
 );
 
-module.exports = Comment;
+module.exports = comment;
