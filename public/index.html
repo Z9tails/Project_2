@@ -20,23 +20,19 @@
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
     <div id="background" class="gameContainer">
-      <!-- BEGIN PROMPT -->
-      <div class="prompt">
-        <h3 class="prompt-text"> A jarring noise causes you to wake up suddenly. What do you do?</h3>
-      </div>
-      <!-- BEGIN CARDS -->
-      <div class="cards">
-        <div class="card blue">
-          <h3 id="blue-card-text" class="card-text">go back to sleep</h3>
-        </div>
-        <div class="card green">
-          <h3 id="green-card-text" class="card-text">get up to see what the noise is</h3>
-        </div>
-        <div class="card red">
-          <h3 id="red-card-text" class="card-text">scream into the void</h3>
-        </div>
-      </div>
-      <!-- END CARDS -->
+      <button id="start-game">Start Game</button>
+        <section id="card-game" class="hide">
+            <!-- BEGIN PROMPT -->
+            <div id="text">Text</div>
+            <!-- END PROMPT -->
+            <!-- BEGIN CARDS -->
+            <div id="option-buttons" class="btn-grid">
+                <button class="card blue">Option 1</button>
+                <button class="card green">Option 1</button>
+                <button class="card red">Option 1</button>
+            </div>
+            <!-- END CARDS -->
+        </section>
       <canvas></canvas>
       <input type="button" value="Swap Background background-image to bed"
           onclick="document.getElementById('background').classList.toggle('bed')">
