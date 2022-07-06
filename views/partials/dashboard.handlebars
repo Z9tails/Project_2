@@ -1,0 +1,37 @@
+<section>
+  <div class="columns is-vcentered">
+      <div class="colummn is-8 pb-6">
+  <h2 class="subtitle">Create New Post</h2>
+
+  <form class="new-post-form">
+    <div class="m-2">
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <div class="m-2">
+      <label for="post">Post</label>
+      <input id="post" name="post" />
+    </div>
+    </div>
+    <button type="submit" class="btn is-success">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <div class="pb-3">
+  <h2 class="subtitle">Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+</div>
+<script src="/javascript/add-post.js"></script>
