@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cardStyles.css">
     <!-- styles for gameContainer -->
     <link rel="stylesheet" href="./assets/css/gameContainerStyles.css">
     <!-- end styles for game container -->
@@ -21,7 +22,27 @@
     <button onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
     <div class="gameContainer" id="game-container">
-      <script type="module" src="./game/game.js"></script>
+      <button id="start-game">Start Game</button>
+        <section id="card-game" class="hide">
+            <!-- BEGIN PROMPT -->
+            <div id="text">Text</div>
+            <!-- END PROMPT -->
+            <!-- BEGIN CARDS -->
+            <div id="option-buttons" class="btn-grid">
+                <button class="card blue">Option 1</button>
+                <button class="card green">Option 1</button>
+                <button class="card red">Option 1</button>
+            </div>
+            <!-- END CARDS -->
+        </section>
+      <input type="button" value="Swap Background background-image to bed"
+          onclick="document.getElementById('game-container').classList.toggle('bed')">
+      <input type="button" value="Swap Background background-image to tree"
+          onclick="document.getElementById('game-container').classList.toggle('tree')">
+      <input type="button" value="Swap Background background-image to fish"
+          onclick="document.getElementById('game-container').classList.toggle('fish')">
+      <input type="button" value="Swap Background background-image to blank"
+          onclick="document.getElementById('game-container').classList.toggle('blank')">
     </div>
     <!-- END GAME BLOCK -->
     <div id="login" class="modal">
@@ -32,50 +53,52 @@
           <span class="oi oi-person"></span>
           <h2>Welcome Back!</h2>
         </div>
-    
+        
         <div class="container">
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required>
-    
+          
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
-            
+          
           <button type="submit">Log in</button>
         </div>
-    
+        
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
     </div>
-
+    
     <div id="newacc" class="modal">
       
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close">&times;</span>
-            <span class="oi oi-person"></span>
-            <h2>Welcome!</h2>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Create Account</button>
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('newacc').style.display='none'" class="cancelbtn">Cancel</button>
-          </div>
-        </form>
-      </div>
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close">&times;</span>
+          <span class="oi oi-person"></span>
+          <h2>Welcome!</h2>
+        </div>
+        
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+          
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          
+          <button type="submit">Create Account</button>
+        </div>
+        
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('newacc').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
     
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/prompt-card.js"></script>
     <!-- script js file for game -->
+    <script type="module" src="./game/game.js"></script>
     <!-- end game script -->
-</body>
-</html>
+  </body>
+  </html>

@@ -1,4 +1,28 @@
 .gameContainer {
-    background-color: aqua;
-    justify-content: center;
+    background-image: url("../img/blank.png ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    animation: morph 5s infinite;
+    transition: background-image 1s;
+    padding: 50px 0;
+}
+#game-container.bed {
+    background-image: url("../img/bed.png");
+}
+#game-container.tree {
+    background-image: url("../img/tree.png");
+}
+#game-container.fish {
+    background-image: url("../img/fishy.png");
+}
+#game-container.blank {
+    background-image: url("../img/blank.png");
+}
+@keyframes morph {
+    0% { background-color: rgb(82, 3, 3); }
+    33% { background-color: rgb(9, 66, 9); }
+    66% { background-color: rgb(4, 4, 90); }
+    100% { background-color: rgb(77, 2, 2); }
 }
