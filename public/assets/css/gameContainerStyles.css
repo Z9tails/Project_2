@@ -6,8 +6,65 @@
     height: 100%;
     animation: morph 5s infinite;
     transition: background-image 1s;
-    padding: 50px 0;
+    padding: 40px 0;
 }
+
+.ears{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ear1{
+    background-color: white;
+    border: 9px double black;
+    padding: 30px;
+    width: 5%;
+    border-radius: 25px;
+}
+
+.space {
+    width: 12%;
+}
+
+.ear2{
+    background-color: white;
+    border: 9px double black;
+    padding: 20px;
+    width: 5%;
+    border-radius: 25px;
+}
+
+
+
+#start-game {
+    font-family: "kdam thmor pro", sans-serif;
+    font-size: x-large;
+    background-color: rgb(48, 187, 48);
+    color: black;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    width: 40%;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.start-game-container {
+    background-color: white;
+    width: 20%;
+    padding: 20px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 20px;
+}
+
+.start-game-container h2 {
+    padding: 15px;
+}
+
 #games.bed {
     background-image: url("../img/bed.png");
 }

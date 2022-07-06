@@ -22,7 +22,15 @@
     <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
     <!-- block for the game -->
     <section id="games">
-      <button id="start-game">Start Game</button>
+      <div class="ears">
+        <div class="ear1"></div>
+        <div class="space"></div>
+        <div class="ear2"></div>
+      </div>
+      <div class="start-game-container">
+        <h2>This might be... Unbearable</h2>
+        <button id="start-game">Start Game</button>
+      </div>
       <div id="card-game" class="hide">
         <!-- BEGIN PROMPT -->
         <div id="text"></div>
@@ -36,16 +44,6 @@
         <!-- END CARDS -->
       </div>
       <div class="gameContainer" id="game-container"></div>
-      <div id="change-background">
-        <input type="button" value="Swap Background background-image to bed"
-            onclick="document.getElementById('games').classList.toggle('bed')">
-        <input type="button" value="Swap Background background-image to tree"
-            onclick="document.getElementById('games').classList.toggle('tree')">
-        <input type="button" value="Swap Background background-image to fish"
-            onclick="document.getElementById('games').classList.toggle('fish')">
-        <input type="button" value="Swap Background background-image to blank"
-            onclick="document.getElementById('games').classList.toggle('blank')">
-      </div>
     </section>
     <!-- END GAME BLOCK -->
 
@@ -66,7 +64,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
           
-          <button type="submit">Log in</button>
+          <button class="nav" type="submit">Log in</button>
         </div>
         
         <div class="container" style="background-color:#f1f1f1">
@@ -91,7 +89,7 @@
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
           
-          <button type="submit">Create Account</button>
+          <button class="nav" type="submit">Create Account</button>
         </div>
         
         <div class="container" style="background-color:#f1f1f1">
