@@ -1,6 +1,8 @@
 const startButtonEl = document.getElementById('start-game')
 const gameLaunchEl = document.getElementById('play-game')
 const gameContainerEl = document.getElementById('game-container')
+const bearsContainerEl = document.getElementById('bear')
+
 
 var modal = document.getElementById('id01');
 
@@ -22,6 +24,7 @@ function startGame () {
 function hideContainers() {
     startButtonEl.setAttribute("hidden", true);
     gameContainerEl.setAttribute("hidden", true);
+    bearsContainerEl.setAttribute("hidden", true);
 };
 
 startButtonEl.addEventListener('click', startGame)
