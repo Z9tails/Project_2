@@ -19,11 +19,11 @@
     <title>Unbearable</title>
   </head>
   <body>
-    <header>
-      <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
-      <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
-    </header>
-   
+
+    <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
+    <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+
+
     <!-- block for the game -->
     <section id="games">
       <div id="bear">
@@ -34,7 +34,13 @@
         </div>
         <div class="start-game-container">
           <h2>This might be... Unbearable</h2>
-          <button id="start-game">Start Game</button>
+            <div>
+              <audio id ="audio">
+                <!-- <source src="horse.ogg" type="audio/ogg"> -->
+                <source src="./assets/sayHey.mp3" type="audio/mpeg">
+              </audio>
+              <button id="start-game">Start Game</button>
+            </div>
         </div>
       </div>
       <div id="card-game" class="hide">
