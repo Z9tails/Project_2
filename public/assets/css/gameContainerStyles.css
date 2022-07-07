@@ -1,13 +1,12 @@
-#games {
+body {
     background-image: url("../img/blank.png ");
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     animation: morph 5s infinite;
     transition: background-image 1s;
-    padding: 40px 0;
 }
+
+
 
 .ears{
     display: flex;
@@ -17,7 +16,7 @@
 
 .ear1{
     background-color: rgb(108, 73, 73);
-    border: 9px double black;
+    border: 12px double black;
     padding: 30px;
     width: 5%;
     border-radius: 50px;
@@ -29,7 +28,7 @@
 
 .ear2{
     background-color: rgb(108, 73, 73);
-    border: 9px double black;
+    border: 12px double black;
     padding: 20px;
     width: 5%;
     border-radius: 50px;
@@ -64,6 +63,10 @@
 
 .start-game-container h2 {
     padding: 15px;
+}
+
+#games {
+    padding: 90px;
 }
 
 #games.bed {

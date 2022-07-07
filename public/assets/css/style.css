@@ -1,7 +1,10 @@
 
 body{
     font-family: "kdam thmor pro", sans-serif;
-    background-color: black;
+}
+
+header {
+  background-color: black;
 }
 
 /* Full-width input fields */
