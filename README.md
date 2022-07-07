@@ -19,6 +19,6 @@ Unbearable is web game played by using the arrow keys, and it includes a section
 ![Website preview](./public/assets/img/screenshot-game.png)
 
 ## Contribution
-Alex Hernandez
+Alex Hernandezgit 
 Mark Taylor
 Jaymee McCarthy
