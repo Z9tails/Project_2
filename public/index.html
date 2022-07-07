@@ -20,23 +20,25 @@
   <body>
     <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+   
+   
     <!-- block for the game -->
     <section id="games">
       <button id="start-game">Start Game</button>
       <div id="card-game" class="hide">
         <!-- BEGIN PROMPT -->
-        <div id="text"></div>
+        <!-- <div id="text"></div> -->
         <!-- END PROMPT -->
         <!-- BEGIN CARDS -->
-        <div id="option-buttons" class="btn-grid">
+        <!-- <div id="option-buttons" class="btn-grid">
           <button class="card blue"></button>
           <button class="card green"></button>
           <button class="card red"></button>
-        </div>
+        </div> -->
         <!-- END CARDS -->
       </div>
-      <div class="gameContainer" id="game-container"></div>
-      <div id="change-background">
+      <div hidden class="gameContainer" id="game-container"></div>
+      <div hidden id="change-background">
         <input type="button" value="Swap Background background-image to bed"
             onclick="document.getElementById('games').classList.toggle('bed')">
         <input type="button" value="Swap Background background-image to tree"
@@ -47,6 +49,7 @@
             onclick="document.getElementById('games').classList.toggle('blank')">
       </div>
     </section>
+
     <!-- END GAME BLOCK -->
 
     <!-- LOG IN MODAL BEGIN -->
