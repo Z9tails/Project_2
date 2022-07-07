@@ -3,6 +3,9 @@ const gameLaunchEl = document.getElementById('play-game')
 const gameContainerEl = document.getElementById('game-container')
 const bearsContainerEl = document.getElementById('bear')
 
+var audio = document.getElementById('audio')
+var count = 0;
+
 
 var modal = document.getElementById('id01');
 
@@ -18,7 +21,18 @@ function startGame () {
     hideContainers();
 
     gameContainerEl.removeAttribute('hidden');
+    playAudio();
     
+}
+
+function playAudio () {
+    if(count == 0) {
+        count = 1;
+        audio.play();
+    } else {
+        count = 0;
+        audio.pause();
+    }
 }
 
 function hideContainers() {
