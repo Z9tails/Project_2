@@ -20,6 +20,8 @@
   <body>
     <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
     <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+   
+   
     <!-- block for the game -->
     <section id="games">
       <div class="ears">
@@ -33,18 +35,19 @@
       </div>
       <div id="card-game" class="hide">
         <!-- BEGIN PROMPT -->
-        <div id="text"></div>
+        <!-- <div id="text"></div> -->
         <!-- END PROMPT -->
         <!-- BEGIN CARDS -->
-        <div id="option-buttons" class="btn-grid">
+        <!-- <div id="option-buttons" class="btn-grid">
           <button class="card blue"></button>
           <button class="card green"></button>
           <button class="card red"></button>
-        </div>
+        </div> -->
         <!-- END CARDS -->
       </div>
-      <div class="gameContainer" id="game-container"></div>
+      <div hidden class="gameContainer" id="game-container"></div>
     </section>
+
     <!-- END GAME BLOCK -->
 
     <!-- LOG IN MODAL BEGIN -->
