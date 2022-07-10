@@ -63,7 +63,7 @@
     <!-- LOG IN MODAL BEGIN -->
     <div id="login" class="modal">
       
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate" action="/api/users/login" method="POST">
         <div class="imgcontainer">
           <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>
           <span class="oi oi-person"></span>
@@ -71,11 +71,11 @@
         </div>
         
         <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
           
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
           
           <button class="nav" type="submit">Log in</button>
         </div>
@@ -88,7 +88,7 @@
     
     <div id="newacc" class="modal">
       
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate" action="/api/users/login" method="POST">
         <div class="imgcontainer">
           <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close">&times;</span>
           <span class="oi oi-person"></span>
@@ -96,11 +96,11 @@
         </div>
         
         <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
           
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
           
           <button class="nav" type="submit">Create Account</button>
         </div>
@@ -116,5 +116,6 @@
     <!-- script js file for game -->
     <script type="module" src="./game/game.js"></script>
     <!-- end game script -->
+    <script type="module" src="./game/test.js"></script>
   </body>
   </html>
