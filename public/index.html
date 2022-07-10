@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/cardStyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- styles for gameContainer -->
     <link rel="stylesheet" href="./assets/css/gameContainerStyles.css">
     <!-- end styles for game container -->
@@ -56,6 +58,41 @@
         <!-- END CARDS -->
       </div>
       <div hidden class="gameContainer" id="game-container"></div>
+      <!-- COMMENT SECTION BEGIN -->
+    <div class="container bootdey">
+      <div class="col-md-12 bootstrap snippets">
+        <!-- comment form -->
+        <div class="panel">
+          <div class="panel-body">
+            <textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
+            <div class="mar-top clearfix">
+              <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+            </div>
+          </div>
+        </div>
+        <!-- comment section content -->
+        <div class="panel">
+          <div class="panel-body">
+            <div class="media-block">
+              <div class="media-body">
+                <!-- comment -->
+                <div class="mar-btm">
+                  <p class="text-semibold media-heading box-inline text-primary" id="username">Lisa D.</p>
+                </div>
+                <p id="comment">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <!-- comment -->
+                <div class="mar-btm">
+                  <p class="text-semibold media-heading box-inline text-primary" id="username">Bobby Marz</p>
+                </div>
+                <p id="comment">Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- End Newsfeed Content -->
+      </div>
+      </div>
+      <!-- COMMENT SECTION END -->
     </section>
 
     <!-- END GAME BLOCK -->
@@ -63,7 +100,9 @@
     <!-- LOG IN MODAL BEGIN -->
     <div id="login" class="modal">
       
+
       <form class="modal-content animate login-form">
+
         <div class="imgcontainer">
           <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>
           <span class="oi oi-person"></span>
