@@ -5,7 +5,7 @@ const { update } = require('../models/Post');
 const withAuth = require('../utils/auth');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
@@ -61,7 +61,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('/login', async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -70,7 +70,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/registration', (req, res) => {
+router.get('/registration', async (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
@@ -80,7 +80,7 @@ router.get('/registration', (req, res) => {
 });
 
 
-router.get('/dashboard', withAuth, (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   
   Post.findAll({
     where: {
@@ -100,7 +100,7 @@ router.get('/dashboard', withAuth, (req, res) => {
     });
 });
 
-router.get('/dashboard/edit/:id', withAuth, (req, res) => {
+router.get('/dashboard/edit/:id', withAuth, async (req, res) => {
   Post.findByPk(req.params.id)
     .then(dbPostData => {
       
