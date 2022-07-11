@@ -1,8 +1,8 @@
-document.getElementById("start-game").onclick = function() {
-    document.getElementById("card-game").classList.toggle("hide");
-    state = {}
-    showTextNode(1)
-};
+// document.getElementById("start-game").onclick = function() {
+//     document.getElementById("card-game").classList.toggle("hide");
+//     state = {}
+//     showTextNode(1)
+// };
 
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
