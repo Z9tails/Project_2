@@ -3,7 +3,7 @@ const { User, Post, Comment } = require('../../models');
 
 
 // get all users
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
   })
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
     where: {
@@ -42,7 +42,7 @@ router.get("/:id", async (req, res) => {
     });
 });
 
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   User.create({
     username: req.body.username,
     password: req.body.password,
@@ -62,7 +62,7 @@ router.post("/", async (req, res) => {
     });
 });
 
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   console.log(req.body);
   User.findOne({
     where: {
@@ -91,7 +91,7 @@ router.post("/login", async (req, res) => {
   });
 });
 
-router.post("/logout", async (req, res) => {
+router.post('/logout', async (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -101,7 +101,7 @@ router.post("/logout", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
@@ -110,7 +110,7 @@ router.put("/:id", async (req, res) => {
     },
   })
     .then((dbUserData) => {
-      if (!dbUserData) {
+      if (!dbUserData[0]) {
         res.status(404).json({ message: "No user found with this id" });
         return;
       }
