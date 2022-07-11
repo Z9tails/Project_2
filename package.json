@@ -21,10 +21,8 @@
     "phaser": "^3.55.2",
     "sequelize": "^6.21.2"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon server.js"
-     
   },
   "repository": {
     "type": "git",
