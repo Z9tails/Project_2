@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   Comment.findAll()
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.post("/", withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   Comment.create({
     postId: req.body.postId,
     comment_text: req.body.comment_text,
@@ -23,7 +23,7 @@ router.post("/", withAuth, async (req, res) => {
     });
 });
 
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id,
