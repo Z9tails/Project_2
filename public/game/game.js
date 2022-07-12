@@ -110,7 +110,7 @@ function create ()
 }
 
     //  the score object
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#F8F8FF' });
 
     function collectfish (_player, fish) 
 

@@ -1,10 +1,13 @@
 {
   "name": "project_2",
   "version": "1.0.0",
-  "description": "UCB second boot camp project.",
+  "description": "UCB second boot camp group project.",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  
   "scripts": {
-    "test": "jest",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -17,14 +20,28 @@
   "bugs": {
     "url": "https://github.com/Z9tails/Project_2/issues"
   },
+
   "homepage": "https://github.com/Z9tails/Project_2#readme",
   "dependencies": {
+    "connection": "^1.4.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "sequelize": "^7.1.4",
+    "bcrypt": "^4.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.7.3"
   },
   "devDependencies": {
     "jest": "^28.1.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
+
+
 }
