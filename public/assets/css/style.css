@@ -5,6 +5,51 @@ body{
 
 header {
   background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel {
+  box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.panel-body {
+  padding: 25px 20px;
+}
+
+.media-block {
+  display: block;
+}
+
+.media-block {
+  display: block;
+  overflow: hidden;
+  width: auto
+}
+
+.middle .media-body {
+  vertical-align: middle
+}
+
+p {
+  color: white;
+}
+
+.text-sm {
+  line-height: 1.25;
+}
+
+.btn-sm {
+  padding: 5px 10px !important;
+}
+
+.mar-top {
+  margin-top: 15px;
 }
 
 /* Full-width input fields */
@@ -23,11 +68,11 @@ input[type=text], input[type=password] {
     background-color: rgb(48, 187, 48);
     color: black;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
     border-radius: 10px;
+    margin: 8px 4px;
   }
   
   button:hover {
