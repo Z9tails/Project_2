@@ -98,43 +98,6 @@
     </section>
     <!-- END GAME BLOCK -->
 
-    <!-- COMMENT SECTION BEGIN -->
-    <!-- <div class="container bootdey">
-    <div class="col-md-12 bootstrap snippets"> -->
-      <!-- comment form -->
-      <!-- <div class="panel">
-        <div class="panel-body">
-          <textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
-          <div class="mar-top clearfix">
-            <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- comment section content -->
-      <!-- <div class="panel">
-        <div class="panel-body">
-          <div class="media-block">
-            <div class="media-body"> -->
-              <!-- comment -->
-              <!-- <div class="mar-btm">
-                <p class="text-semibold media-heading box-inline text-primary" id="username">Lisa D.</p>
-              </div>
-              <p id="comment">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p> -->
-              <!-- comment -->
-              <!-- <div class="mar-btm">
-                <p class="text-semibold media-heading box-inline text-primary" id="username">Bobby Marz</p>
-              </div>
-              <p id="comment">Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-
-            </div>
-          </div>
-        </div>
-      </div> -->
-        <!-- End Newsfeed Content -->
-    <!-- </div>
-    </div> -->
-    <!-- COMMENT SECTION END -->
 
     <!-- LOG IN MODAL BEGIN -->
     <div id="login" class="modal">
@@ -166,7 +129,7 @@
     
     <div id="newacc" class="modal">
       
-      <form class="modal-content animate" action="/api/users/login" method="POST">
+      <form class="modal-content animate signup-form" action="/api/users/login" method="POST">
         <div class="imgcontainer">
           <span onclick="document.getElementById('newacc').style.display='none'" class="close" title="Close">&times;</span>
           <span class="oi oi-person"></span>
@@ -175,10 +138,10 @@
         
         <div class="container">
           <label for="username"><b>Username</b></label>
-          <input  type="text" placeholder="Enter Username" name="username" required>
+          <input  type="text" id="username-signup" placeholder="Enter Username" name="username" required>
           
           <label for="password"><b>Password</b></label>
-          <input  type="password" placeholder="Enter Password" name="password" required>
+          <input  type="password" id="password-signup" placeholder="Enter Password" name="password" required>
           
           <button class="nav" type="submit">Create Account</button>
         </div>
@@ -195,7 +158,7 @@
     <!-- script js file for game -->
     <script type="module" src="./game/game.js"></script>
     <!-- end game script -->
-    <script type="module" src="./game/test.js"></script>
+    <!-- <script type="module" src="./game/test.js"></script> -->
     <script src="/javascript/login.js"></script>
   </body>
   </html>
