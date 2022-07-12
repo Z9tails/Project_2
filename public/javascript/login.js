@@ -8,11 +8,11 @@ async function loginFormHandler(event) {
   const username = document.getElementById("loginusername").value.trim();
    
    const loginbutton = document.getElementById('loginButton');
-    const signupbutton = document.getElementById('signup');
+   const signupbutton = document.getElementById('signup');
 
 
   if (username && password) {
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/", {
       method: "post",
       body: JSON.stringify({
         username: username,
