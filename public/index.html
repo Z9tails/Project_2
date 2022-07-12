@@ -22,8 +22,10 @@
   </head>
   <body>
 
-    <button class="nav" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
-    <button class="nav" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+
+    <button class="nav" id="loginButton" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Log in</button>
+    <button class="nav" id= "signup" onclick="document.getElementById('newacc').style.display='block'" style="width:auto;">Create New Account</button>
+
 
 
     <!-- block for the game -->
@@ -109,10 +111,12 @@
         
         <div class="container">
           <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required>
+
+          <input type="text" id="loginusername" placeholder="Enter Username" name="username" required>
           
           <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required>
+          <input type="password" id="loginpassword" placeholder="Enter Password" name="password" required>
+
           
           <button class="nav" type="submit">Log in</button>
         </div>
@@ -134,10 +138,10 @@
         
         <div class="container">
           <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required>
+          <input  type="text" placeholder="Enter Username" name="username" required>
           
           <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required>
+          <input  type="password" placeholder="Enter Password" name="password" required>
           
           <button class="nav" type="submit">Create Account</button>
         </div>
@@ -150,6 +154,7 @@
     <!-- LOG IN MODAL ENDS -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/prompt-card.js"></script>
+    <script src="./javascript/registration.js"></script>
     <!-- script js file for game -->
     <script type="module" src="./game/game.js"></script>
     <!-- end game script -->
