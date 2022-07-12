@@ -3,7 +3,7 @@ const { User, Post, Comment } = require('../../models');
 
 
 // get all users
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
   })
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
     where: {
@@ -42,7 +42,7 @@ router.get("/:id", async (req, res) => {
     });
 });
 
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   User.create({
     username: req.body.username,
     password: req.body.password,
@@ -62,7 +62,7 @@ router.post("/", async (req, res) => {
     });
 });
 
-router.post("/login", async (req, res) => {
+router.post('/login', async (req, res) => {
   User.findOne({
     where: {
       username: req.body.username,
@@ -123,7 +123,7 @@ router.put('/:id', async (req, res) => {
     });
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', async (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
