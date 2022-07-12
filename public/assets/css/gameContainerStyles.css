@@ -29,12 +29,14 @@ body {
 .ear2{
     background-color: rgb(108, 73, 73);
     border: 12px double black;
-    padding: 20px;
+    padding: 30px;
     width: 5%;
     border-radius: 50px;
 }
 
-
+h2 {
+    color: black;
+}
 
 #start-game {
     font-family: "kdam thmor pro", sans-serif;
@@ -43,11 +45,11 @@ body {
     color: white;
     padding: 14px 20px;
     margin: auto;
-    border: none;
-    width: 40%;
+    width: 50%;
     border-radius: 20px;
     border: 3px solid black;
     cursor: pointer;
+    justify-content: center;
 }
 
 .start-game-container {
