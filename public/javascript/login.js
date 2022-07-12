@@ -1,7 +1,6 @@
 async function loginFormHandler(event) {
   console.log('hello there, General')
   event.preventDefault();
-
   console.log(document.getElementById('username'));
    console.log(document.getElementById("password"));
   const password = document.getElementById("loginpassword").value.trim();
@@ -9,7 +8,6 @@ async function loginFormHandler(event) {
    
    const loginbutton = document.getElementById('loginButton');
     const signupbutton = document.getElementById('signup');
-
 
   if (username && password) {
     const response = await fetch("/api/users/login", {
