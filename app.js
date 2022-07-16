@@ -8,11 +8,11 @@ const routes = require('./controllers');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT 
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+console.log(process.env.PORT);
 
 const sess = {
   secret: "Super secret secret",

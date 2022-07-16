@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/19ae1976-8f25-4891-a0df-ea0976558f54/microsoft.web/sites/subscriptions/19ae1976-8f25-4891-a0df-ea0976558f54/resourceGroups/DefaultResourceGroup-CUS/providers/Microsoft.Web/sites/UnbearableDeuce",
+    "appService.deploySubpath": "."
+}

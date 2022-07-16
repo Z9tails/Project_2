@@ -2,12 +2,12 @@
   "name": "project_2",
   "version": "1.0.0",
   "description": "UCB second boot camp group project.",
-  "main": "server.js",
+  "main": "app.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,8 @@
   "bugs": {
     "url": "https://github.com/Z9tails/Project_2/issues"
   },
-  "homepage": "https://github.com/Z9tails/Project_2#readme",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.1.4",
     "connection": "^1.4.0",
     "dotenv": "^16.0.1",
