@@ -9,10 +9,17 @@ Unbearable is web game played by using the arrow keys, and it includes a section
 * HTML
 * CSS
 * Express.js
+* Nodejs
+* Handlebars
+* Sequelize
 * Phaser
+* Azure
 
 ## Website
 **https://Z9tails.github.io/Project_2/**
+
+## Deploy
+* https://unbearabledeuce.azurewebsites.net/
 
 ## Preview
 ![Website preview](./public/assets/img/screenshot-bear.png)
