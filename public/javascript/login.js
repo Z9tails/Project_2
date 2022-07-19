@@ -10,14 +10,18 @@ async function loginFormHandler(event) {
     const signupbutton = document.getElementById('signup');
 
   if (username && password) {
-    const response = await fetch("/api/users/login", {
-      method: "POST",
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+    console.log(password);
+    const response = await fetch(
+      "/api/users/login",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     if (response.ok) {
       // document.location.replace("/");
