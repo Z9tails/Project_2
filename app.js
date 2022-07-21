@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-const htmlRoutes = require('./routes/htmlRoutes')
+//const htmlRoutes = require('./routes/htmlRoutes')
 const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
